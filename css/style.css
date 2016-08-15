@@ -20,7 +20,15 @@ input[type="text"],[type="number"]{
   width:80%;
   padding:10px;
 }
-
+.radio-btn {
+  display: block;
+  float: left;
+  font-family: "Aladin", Georgia, Serif;
+  font-size: 20px;
+  height: 51px;
+  width:100%;
+}
+input[type="radio"] {margin:10px;} 
 
 input[type="button"] {
   width:85%;
