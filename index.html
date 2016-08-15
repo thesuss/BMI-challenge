@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sussens BMI-räknare!</title>
+    <link href="css/style.css" rel="stylesheet">
     <script src="src/Person.js"></script>
     <script src="src/BmiCalculator.js"></script>
     <script src='https://code.jquery.com/jquery-2.1.4.js'></script>
@@ -22,16 +23,20 @@
       });
     });
   </script>
+  <div id="wrapper">
+  <h1>Sussens BMI-räknare!</h1>
+  <div class="form-group">
     <form>
       <input type="text" id="name" placeholder="Name">
       <input type="number" id="weight" placeholder="Weight">
       <input type="number" id="height" placeholder="Height">
       <input type="button" id="calculate" value="Calculate">
     </form>
-    <div>
+  </div>
+    <div class="message">
       <span id="display_value"></span>
       <span id="display_message"></span>
-
     </div>
+  </div>
   </body>
 </html>
