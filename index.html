@@ -39,13 +39,14 @@
         } else {
           this.style.border = "1px solid blue";
           this.style.backgroundColor = "blue";
-          this.value = 'Choose metric or imperial please!';        }
+          this.value = 'Choose metric or imperial please!';
+        }
         if( inputName.value == "" || inputHeight.value == "" || inputWeight.value == ""  )
         {
           this.style.border = "1px solid red";
           this.style.backgroundColor = "red";
           this.value = 'No field should be left blank!';
-        } else {
+        } else if($('#metric').is(':checked') || $('#imperial').is(':checked')){
           person.calculate_bmi(method);
           $('#display_value').html('Your BMI is ' + person.bmiValue);
           $('#display_message').html('which means, '+ person.bmiMessage);
