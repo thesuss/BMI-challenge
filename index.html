@@ -36,17 +36,22 @@
         } else if($('#imperial').is(':checked')){
           method = "imperial"
         } else {
-          alert("Chose calculation sort!")
-        }
+          this.style.border = "1px solid blue";
+          this.style.backgroundColor = "blue";
+          this.value = 'Choose metric or imperial please!';        }
         if( inputName.value == "" || inputHeight.value == "" || inputWeight.value == ""  )
         {
           this.style.border = "1px solid red";
-          this.style.backgroundColor = "#FFCCCC";
-          this.value = 'Field should not be left blank!';
+          this.style.backgroundColor = "red";
+          this.value = 'No field should be left blank!';
+        } else {
+          person.calculate_bmi(method);
+          $('#display_value').html('Your BMI is ' + person.bmiValue);
+          $('#display_message').html('which means, '+ person.bmiMessage);
+          this.style.border = "1px solid green";
+          this.style.backgroundColor = "green";
+          this.value = 'Result below:';
         }
-        person.calculate_bmi(method);
-        $('#display_value').html('Your BMI is ' + person.bmiValue);
-        $('#display_message').html('which means, '+ person.bmiMessage);
       });
     });
   </script>
