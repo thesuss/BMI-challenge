@@ -3,6 +3,7 @@ describe('BMI_UI - index.html', function() {
         jasmine.getFixtures().fixturesPath = '.';
         loadFixtures('index.html');
         $.holdReady(false);
+        $("#metric").prop("checked", true);
         $('#weight').val('90');
         $('#height').val('186');
         $('#name').val('Thesuss');
@@ -14,6 +15,6 @@ describe('BMI_UI - index.html', function() {
     });
 
     it("displays BMI Message", function() {
-        expect($('#display_message').text()).toBe('which means, Thesuss - You are Overweight');
+        expect($('#display_message').text()).toBe('which means, Thesuss - You need to loose a little weight');
     });
 });
