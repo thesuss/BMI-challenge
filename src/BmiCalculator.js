@@ -32,9 +32,9 @@ function BMICalculator(){
         obj.bmiMessage = obj.name + " - You are of normal BMI"
       }
       if (obj.bmiValue > 25 && obj.bmiValue < 30) {
-        obj.bmiMessage = obj.name + " - You need to loose a little weight"
+        obj.bmiMessage = obj.name + " - You need to lose a little weight"
       }
       if (obj.bmiValue > 30) {
-        obj.bmiMessage = obj.name + " - You need to loose a lot of weight"
+        obj.bmiMessage = obj.name + " - You need to lose a lot of weight"
       }
     };

@@ -15,6 +15,6 @@ describe('BMI_UI - index.html', function() {
     });
 
     it("displays BMI Message", function() {
-        expect($('#display_message').text()).toBe('which means, Thesuss - You need to loose a little weight');
+        expect($('#display_message').text()).toBe('which means, Thesuss - You need to lose a little weight');
     });
 });
