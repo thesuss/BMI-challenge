@@ -12,12 +12,20 @@
   <body>
   <script type="text/javascript">
     $(document).ready(function () {
+      $('input:radio[name="units"][value="metric"]').prop('checked', true);
       $('#calculate').click(function () {
         var w = parseFloat($('#weight').val());
         var h = parseFloat($('#height').val());
         var n = $('#name').val();
         var person = new Person({name: n, weight: w, height: h});
-        person.calculate_bmi();
+        if($('#metric').is(':checked')) {
+            method = "metric"
+          } else if($('#imperial').is(':checked')){
+            method = "imperial"
+          } else {
+            alert("Chose calculation sort!")
+          }
+        person.calculate_bmi(method);
         $('#display_value').html('Your BMI is ' + person.bmiValue);
         $('#display_message').html('which means, '+ person.bmiMessage);
       });
