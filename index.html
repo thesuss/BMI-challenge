@@ -12,7 +12,16 @@
   <body>
   <script type="text/javascript">
     $(document).ready(function () {
-      $('input:radio[name="units"][value="metric"]').prop('checked', true);
+
+      $('input:radio[name="units"]').change(function(){
+        if($('#metric').is(':checked')) {
+          $("#weight").attr("placeholder", "Weight in kg");
+          $("#height").attr("placeholder", "Height in cm");
+        } else {
+          $("#weight").attr("placeholder", "Weight in lbs");
+          $("#height").attr("placeholder", "Height in inches");
+        }
+      });
       $('#calculate').click(function () {
         var w = parseFloat($('#weight').val());
         var h = parseFloat($('#height').val());
