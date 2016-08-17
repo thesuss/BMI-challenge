@@ -18,7 +18,7 @@ function BMICalculator(){
       var height = obj.height;
       var name = obj.name;
       if (weight > 0 && height > 0) {
-        var finalBmi = (weight * 705) / (height * height);
+        var finalBmi = (weight * 703) / (height * height);
         obj.bmiValue =  parseFloat(finalBmi.toFixed(2));
         setBMIMessage(obj);
       }
